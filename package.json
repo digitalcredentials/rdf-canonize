@@ -26,6 +26,8 @@
     "lib/*.js"
   ],
   "dependencies": {
+    "fast-text-encoding": "^1.0.3",
+    "isomorphic-webcrypto": "^2.3.8",
     "setimmediate": "^1.0.5"
   },
   "devDependencies": {
@@ -83,6 +85,11 @@
   "browser": {
     "./lib/MessageDigest.js": "./lib/MessageDigest-webcrypto.js",
     "./lib/platform.js": "./lib/platform-browser.js",
+    "rdf-canonize-native": false
+  },
+  "react-native": {
+    "./lib/MessageDigest.js": "./lib/MessageDigest-webcrypto.js",
+    "./lib/platform.js": "./lib/platform-reactnative.js",
     "rdf-canonize-native": false
   },
   "nyc": {
