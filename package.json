@@ -1,8 +1,8 @@
 {
-  "name": "rdf-canonize",
+  "name": "@digitalcredentials/rdf-canonize",
   "version": "3.4.1-0",
   "description": "An implementation of the RDF Dataset Normalization Algorithm in JavaScript",
-  "homepage": "https://github.com/digitalbazaar/rdf-canonize",
+  "homepage": "https://github.com/digitalcredentials/rdf-canonize",
   "author": {
     "name": "Digital Bazaar, Inc.",
     "email": "support@digitalbazaar.com",
@@ -13,11 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/rdf-canonize"
+    "url": "https://github.com/digitalcredentials/rdf-canonize"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/rdf-canonize/issues",
-    "email": "support@digitalbazaar.com"
+    "url": "https://github.com/digitalcredentials/rdf-canonize/issues"
   },
   "license": "BSD-3-Clause",
   "main": "index.js",
@@ -26,6 +25,8 @@
     "lib/*.js"
   ],
   "dependencies": {
+    "fast-text-encoding": "^1.0.3",
+    "isomorphic-webcrypto": "^2.3.8",
     "setimmediate": "^1.0.5"
   },
   "devDependencies": {
@@ -52,7 +53,6 @@
     "klona": "^2.0.6",
     "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
-    "nsolid": "0.0.0",
     "nyc": "^15.1.0",
     "webpack": "^5.88.0"
   },
@@ -83,6 +83,11 @@
   "browser": {
     "./lib/MessageDigest.js": "./lib/MessageDigest-webcrypto.js",
     "./lib/platform.js": "./lib/platform-browser.js",
+    "rdf-canonize-native": false
+  },
+  "react-native": {
+    "./lib/MessageDigest.js": "./lib/MessageDigest-webcrypto.js",
+    "./lib/platform.js": "./lib/platform-reactnative.js",
     "rdf-canonize-native": false
   },
   "nyc": {

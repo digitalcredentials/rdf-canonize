@@ -1,5 +1,10 @@
 # rdf-canonize ChangeLog
 
+## 4.11.0 -
+### Changed
+- Add support for React Native (use `isomorphic-webcrypto` and `fast-text-encoding`)
+- Rename package to `@digitalcredentials/rdf-canonize`
+
 ## 4.0.0 - 2023-03-xx
 
 ### Added

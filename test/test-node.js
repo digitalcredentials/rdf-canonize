@@ -17,21 +17,6 @@ const path = require('path');
 
 // try to load native bindings
 let rdfCanonizeNative;
-// try regular load
-try {
-  rdfCanonizeNative = require('rdf-canonize-native');
-} catch(e) {
-  // try peer package
-  try {
-    rdfCanonizeNative = require('../../rdf-canonize-native');
-  } catch(e) {
-  }
-}
-// use native bindings
-if(!rdfCanonizeNative) {
-  // skip native tests
-  console.warn('rdf-canonize-native not found');
-}
 
 const entries = [];
 
