@@ -27,7 +27,7 @@
   "dependencies": {
     "fast-text-encoding": "^1.0.3",
     "isomorphic-webcrypto": "^2.3.8",
-    "setimmediate": "^1.0.5",
+    "setimmediate": "^1.0.5"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
